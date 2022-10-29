@@ -9,7 +9,7 @@ export default async (req, res) => {
            .collection("rm_commit")
            .find({})
            .sort({ committer_date: -1 })
-           .limit(100)
+           //.limit(100)
            .toArray();
 
        res.json(movies);
