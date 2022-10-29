@@ -14,6 +14,6 @@ export default async (req, res) => {
 
        res.json(movies);
    } catch (e) {
-       console.error(e);
+        res.json(e);
    }
 };
