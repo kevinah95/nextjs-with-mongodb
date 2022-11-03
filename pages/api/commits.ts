@@ -24,7 +24,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         const commits = await db
             .collection("rm_commit")
             .find({})
-            .sort({ committer_date: -1 })
+            .sort({ _id: -1 })
             //.limit(100)
             .toArray();
 
