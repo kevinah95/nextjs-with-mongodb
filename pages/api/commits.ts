@@ -23,7 +23,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         const findQuery = repositoryId ? { repository: new ObjectId(repositoryId) } : {};
         
         const client = await clientPromise;
-        const db = client.db("test_database");
+        const db = client.db("repominer_database");
 
         const commits = await db
             .collection("rm_commit")
