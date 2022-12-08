@@ -19,7 +19,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
     try {
         const client = await clientPromise;
-        const db = client.db("test_database");
+        const db = client.db("repominer_database");
 
         const repositories = await db
             .collection("rm_repository")
